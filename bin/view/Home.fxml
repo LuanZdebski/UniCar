@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="545.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <Pane fx:id="PanePesquisa" prefHeight="545.0" prefWidth="667.0" style="-fx-background-color: #E0FFFF;">
+         <children>
+            <ScrollPane layoutX="135.0" layoutY="155.0" prefHeight="390.0" prefWidth="532.0" style="-fx-background-color: #E0FFFF;">
+               <content>
+                  <ListView fx:id="listView" onMousePressed="#OnMouseClick" prefHeight="388.0" prefWidth="529.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="txtLoginInfo" layoutX="4.0" layoutY="2.0" text="Label" />
+            <TextField fx:id="tfPesquisa" layoutX="30.0" layoutY="113.0" prefHeight="25.0" prefWidth="432.0" />
+            <Label fx:id="txtLoginInfo1" layoutX="32.0" layoutY="91.0" text="Qual tipo de veículo você procura?">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBuscar" layoutX="502.0" layoutY="109.0" mnemonicParsing="false" onAction="#onBuscar" prefHeight="11.0" prefWidth="104.0" style="-fx-background-color: #1778a1;" text="Buscar">
+               <font>
+                  <Font name="Calibri Light Italic" size="18.0" />
+               </font>
+            </Button>
+            <Pane layoutX="30.0" layoutY="19.0" prefHeight="66.0" prefWidth="642.0" style="-fx-background-color: #1778a1;">
+               <children>
+                  <Label layoutX="258.0" layoutY="6.0" text="UniCar" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <RadioButton fx:id="rdBarato" layoutX="13.0" layoutY="178.0" mnemonicParsing="false" onAction="#radioChange" selected="true" text="Mais barato" />
+            <Label layoutX="13.0" layoutY="155.0" text="Classificar por:" />
+            <RadioButton fx:id="rdCaro" layoutX="13.0" layoutY="195.0" mnemonicParsing="false" onAction="#radioChange" text="Mais caro" />
+            <RadioButton fx:id="rdIVRBaixo" layoutX="13.0" layoutY="239.0" mnemonicParsing="false" onAction="#radioChange" prefHeight="17.0" prefWidth="114.0" text="IVR baixo" />
+            <RadioButton fx:id="rdIVRAlto" layoutX="13.0" layoutY="256.0" mnemonicParsing="false" onAction="#radioChange" text="IVR alto" />
+            <RadioButton fx:id="rdNovos" layoutX="13.0" layoutY="299.0" mnemonicParsing="false" onAction="#radioChange" prefHeight="17.0" prefWidth="114.0" text="Mais novos" />
+            <RadioButton fx:id="rdAntigos" layoutX="13.0" layoutY="316.0" mnemonicParsing="false" onAction="#radioChange" text="Mais antigos" />
+         </children>
+      </Pane>
+      <Pane fx:id="PaneDetalhes" layoutX="1.0" layoutY="1.0" prefHeight="545.0" prefWidth="667.0" style="-fx-background-color: #E0FFFF;" visible="false">
+         <children>
+            <Line endX="503.0" layoutX="164.0" layoutY="46.0" startX="-130.0" />
+            <Label fx:id="txtModelo" layoutX="34.0" layoutY="6.0" text="Modelo">
+               <font>
+                  <Font name="Calibri Light" size="36.0" />
+               </font>
+            </Label>
+            <Line endX="84.0" layoutX="164.0" layoutY="332.0" startX="-130.0" />
+            <Label layoutX="34.0" layoutY="332.0" text="Categoria" textFill="#909090">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="503.0" layoutX="164.0" layoutY="503.0" startX="-130.0" />
+            <Label layoutX="34.0" layoutY="448.0">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnVoltar" layoutX="5.0" layoutY="510.0" mnemonicParsing="false" onAction="#OnVoltar" prefHeight="28.0" prefWidth="69.0" text="Voltar" textFill="#4574d0">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
+            <Line endX="84.0" layoutX="568.0" layoutY="332.0" startX="-130.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="438.0" layoutY="332.0" text="Quantidade de portas" textAlignment="RIGHT" textFill="#909090">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="84.0" layoutX="164.0" layoutY="402.0" startX="-130.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="34.0" layoutY="402.0" text="Combustivel" textAlignment="RIGHT" textFill="#909090">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="84.0" layoutX="568.0" layoutY="402.0" startX="-130.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="438.0" layoutY="402.0" text="Ano de fabricação" textAlignment="RIGHT" textFill="#909090">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="84.0" layoutX="162.0" layoutY="471.0" startX="-130.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="32.0" layoutY="471.0" text="Indice de roubo" textAlignment="RIGHT" textFill="#909090">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="84.0" layoutX="568.0" layoutY="471.0" startX="-130.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="438.0" layoutY="471.0" text="FIPE" textAlignment="RIGHT" textFill="#909090">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgHolder" fitHeight="249.0" fitWidth="326.0" layoutX="171.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="txtCategoria" layoutX="34.0" layoutY="303.0" text="Sedan">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtQntPortas" layoutX="439.0" layoutY="303.0" text="4">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtCombustivel" layoutX="34.0" layoutY="374.0" text="Gasolina">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtAno" layoutX="439.0" layoutY="374.0" text="2014">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtIVR" layoutX="36.0" layoutY="443.0" text="0,123">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtFIPE" layoutX="441.0" layoutY="443.0" text="123,00">
+               <font>
+                  <Font name="Calibri Light" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ArchorPane" prefHeight="422.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicioController">
+   <children>
+      <Pane fx:id="paneLogin" prefHeight="416.0" prefWidth="505.0">
+         <children>
+            <Label layoutX="195.0" layoutY="25.0" text="Unicar">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfLogin" alignment="CENTER" layoutX="178.0" layoutY="183.0" promptText="Login" />
+            <TextField fx:id="tfSenha" alignment="CENTER" layoutX="178.0" layoutY="224.0" promptText="Senha" />
+            <Button fx:id="btnEntrar" layoutX="205.0" layoutY="292.0" mnemonicParsing="false" onAction="#onEntrar" text="Entrar">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNovoUsuario" layoutX="427.0" layoutY="371.0" mnemonicParsing="false" onAction="#onNovoUsuario" text="Registrar" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneRegister" prefHeight="416.0" prefWidth="505.0" visible="false">
+         <children>
+            <Label layoutX="195.0" layoutY="25.0" text="Unicar">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNome" alignment="CENTER" layoutX="143.0" layoutY="126.0" prefHeight="25.0" prefWidth="219.0" promptText="Nome Completo" />
+            <TextField fx:id="tfRegisterSenha" alignment="CENTER" layoutX="178.0" layoutY="292.0" promptText="Senha" />
+            <Button fx:id="btnRegistrar" layoutX="189.0" layoutY="333.0" mnemonicParsing="false" onAction="#onRegistrar" text="Registrar">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVoltar" layoutX="427.0" layoutY="371.0" mnemonicParsing="false" onAction="#onVoltar" text="Voltar" />
+            <DatePicker fx:id="tfData" layoutX="143.0" layoutY="164.0" prefHeight="25.0" prefWidth="219.0" promptText="Data de nascimento" />
+            <TextField fx:id="tfRegisterLogin" alignment="CENTER" layoutX="178.0" layoutY="259.0" promptText="Login" />
+            <RadioButton fx:id="rdMasculino" layoutX="143.0" layoutY="200.0" mnemonicParsing="false" onAction="#onMasculino" text="Masculino" />
+            <RadioButton fx:id="rdFeminino" layoutX="292.0" layoutY="200.0" mnemonicParsing="false" onAction="#onFeminino" text="Feminino" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
